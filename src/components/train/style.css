@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+header, footer {
+    display: block;
+}
+
+a, a:link, a:visited {
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.center {
+    background: #000c18;
+    background: -webkit-linear-gradient(#013971, #000c18 60%);
+    background: -moz-linear-gradient(#013971, #000c18 60%);
+    background: -o-linear-gradient(#013971, #000c18 60%);
+    background: -ms-linear-gradient(#013971, #000c18 60%);
+    background: linear-gradient(#013971, #000c18 60%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.center::before, .center::after {
+    content: "";
+    position: absolute;
+}
+.center::before {
+    background: rgba(255, 250, 175, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 3em 0 rgba(255, 250, 175, 0.5);
+    height: 16em;
+    left: 20%;
+    top: -4em;
+    width: 16em;
+}
+.center::after {
+    background: -moz-radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 5%) left/14em 15em, radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 3%) left/10em 9em;
+    background: -webkit-radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 5%) left/14em 15em, radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 3%) left/10em 9em;
+    background: -o-radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 5%) left/14em 15em, radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 3%) left/10em 9em;
+    background: -ms-radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 5%) left/14em 15em, radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 3%) left/10em 9em;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 5%) left/14em 15em, radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 3%) left/10em 9em;
+    height: 100%;
+    width: 100%;
+}
+
+.mountains {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.mountains::before, .mountains::after {
+    background: #000c18;
+    background: -moz-linear-gradient(#012a53, #000c18 50%);
+    background: -webkit-linear-gradient(#012a53, #000c18 50%);
+    background: -o-linear-gradient(#012a53, #000c18 50%);
+    background: -ms-linear-gradient(#012a53, #000c18 50%);
+    background: linear-gradient(#012a53, #000c18 50%);
+    content: "";
+    height: 100%;
+    position: absolute;
+}
+.mountains::before {
+    border-radius: 100% 300% 0 0;
+    left: -20%;
+    width: 57%;
+}
+.mountains::after {
+    border-radius: 300% 100% 0 0;
+    right: -20%;
+    width: 80%;
+}
+
+.frame {
+    height: 100vh;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110em;
+    z-index: 1;
+}
+.frame::before, .frame::after {
+    background: black;
+    background: -webkit-linear-gradient(#333333, black 20%);
+    background: -moz-linear-gradient(#333333, black 20%);
+    background: -o-linear-gradient(#333333, black 20%);
+    background: -ms-linear-gradient(#333333, black 20%);
+    background: linear-gradient(#333333, black 20%);
+    bottom: 12.6em;
+    content: "";
+    height: 20em;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.frame::before {
+    border-radius: 0 1em 0 0;
+    border-right: 0.5em solid black;
+    left: -100%;
+}
+.frame::after {
+    border-left: 0.5em solid black;
+    border-radius: 1em 0 0 0;
+    right: -100%;
+}
+
+.bridge {
+    border-bottom: 0.3em solid white;
+    border-top: 0.3em solid white;
+    background: black;
+    background: -webkit-linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em, -webkit-linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em;
+    background: -moz-linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em, -moz-linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em;
+    background: -o-linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em, -o-linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em;
+    background: -ms-linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em, -ms-linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em;
+    background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6em 2.2em;
+    bottom: 10em;
+    height: 2.6em;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.train {
+    bottom: 12.6em;
+    height: 10em;
+    position: absolute;
+    left: calc(100% + 1.3em);
+    width: 44em;
+    z-index: 1;
+}
+
+.engine-front::before, .engine-front::after, .engine-front {
+    background: #0f0f0f;
+    background: linear-gradient(0deg, #0f0f0f, #262626, #0f0f0f);
+    border: 0.1em solid rgba(255, 255, 255, 0.15);
+    border-radius: 50% 0 0 50%;
+    border-right: none;
+}
+
+.engine-front {
+    animation: body-upDown 0.3s infinite;
+    border-radius: 0.5em 0 0 0.5em;
+    bottom: 1.4em;
+    height: 4.6em;
+    left: 0;
+    position: absolute;
+    width: 8em;
+}
+.engine-front::before, .engine-front::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    left: -0.9em;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 0.8em;
+}
+.engine-front::after {
+    height: 40%;
+    left: -1.4em;
+    width: 0.5em;
+}
+
+.chimney {
+    background: #990000;
+    height: 2.2em;
+    left: 2.5em;
+    position: absolute;
+    top: -2.3em;
+    width: 1.7em;
+}
+.chimney::before, .chimney::after {
+    content: "";
+    position: absolute;
+}
+.chimney::before {
+    animation: up-down 0.3s infinite;
+    border-bottom: none;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.8em solid orange;
+    left: 50%;
+    top: -0.9em;
+    transform: translate(-50%, 0);
+    width: 160%;
+}
+
+.smoke {
+    animation: move-smoke 0.4s linear infinite;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    height: 1.4em;
+    left: 0.2em;
+    position: absolute;
+    top: -1.5em;
+    width: 0.8em;
+    z-index: -1;
+}
+.smoke-2 {
+    animation-delay: 0.1s;
+    left: 0.4em;
+}
+.smoke-3 {
+    animation-delay: 0.2s;
+    left: 0.6em;
+}
+.smoke-4 {
+    left: 0.8em;
+}
+
+.engine-body {
+    animation: body-upDown 0.3s 0.1s infinite;
+    background: #b30000;
+    background: linear-gradient(0deg, #330000, red, #990000);
+    border-radius: 0 0 0.4em 0;
+    bottom: 1.4em;
+    height: 7em;
+    left: 8em;
+    position: absolute;
+    width: 5em;
+}
+.engine-body::before, .engine-body::after {
+    content: "";
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
+.engine-body::before {
+    animation: up-down 0.3s 0.2s infinite;
+    background: #660000;
+    background: linear-gradient(0deg, #660000, #990000, #660000);
+    border-radius: 50% 50% 0 0;
+    height: 1.2em;
+    top: -1.2em;
+    width: 130%;
+}
+.engine-body::after {
+    background: #b3e0f2;
+    border-radius: 0.2em;
+    height: 40%;
+    top: 1em;
+    width: 45%;
+}
+
+.wheel::after, .wheel::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wheel-holder {
+    height: 2.8em;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.wheel {
+    animation: rotate 2s linear infinite;
+    background: orange;
+    border: 0.3em solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    height: 2.8em;
+    left: 1em;
+    position: absolute;
+    width: 2.8em;
+}
+.wheel-2 {
+    left: 4.5em;
+    z-index: 1;
+}
+.wheel-3 {
+    border-width: 0.5em;
+    height: 3.8em;
+    left: 8.7em;
+    top: -1.1em;
+    width: 3.8em;
+}
+.wheel-4 {
+    left: 15.7em;
+}
+.wheel-5 {
+    left: 19.5em;
+}
+.wheel-6 {
+    left: 25.7em;
+}
+.wheel-7 {
+    left: 29.5em;
+}
+.wheel-8 {
+    left: 35.7em;
+}
+.wheel-9 {
+    left: 39.5em;
+}
+.wheel::before, .wheel::after {
+    content: "";
+    position: absolute;
+}
+.wheel::before {
+    background: rgba(0, 0, 0, 0.3);
+    height: 86%;
+    width: 0.2em;
+}
+.wheel::after {
+    background: #996300;
+    background: -webkit-radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    background: -moz-radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    background: -o-radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    background: -ms-radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    background: radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    border-radius: 50%;
+    height: 40%;
+    width: 40%;
+}
+
+.compartment {
+    animation: body-upDown 0.3s infinite;
+    background: #186c8e;
+    background: -webkit-linear-gradient(#104b63 50%, #1f8dba);
+    background: -moz-linear-gradient(#104b63 50%, #1f8dba);
+    background: -o-linear-gradient(#104b63 50%, #1f8dba);
+    background: -ms-linear-gradient(#104b63 50%, #1f8dba);
+    background: linear-gradient(#104b63 50%, #1f8dba);
+    border-radius: 0 0 0.3em 0.3em;
+    bottom: 1.4em;
+    height: 5em;
+    left: 15em;
+    position: absolute;
+    width: 8em;
+}
+.compartment-two {
+    animation: body-upDown 0.3s 0.1s infinite;
+    left: 25em;
+}
+.compartment-two .compartment-window::before {
+    animation: up-down 0.3s 0.3s infinite;
+}
+.compartment-three {
+    animation: body-upDown 0.3s 0.2s infinite;
+    left: 35em;
+}
+.compartment-three .compartment-window::before {
+    animation: up-down 0.35s infinite;
+}
+.compartment::before, .compartment::after {
+    background: black;
+    border: 0.4em solid transparent;
+    bottom: 0.4em;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    content: "";
+    height: 0.8em;
+    position: absolute;
+    width: 0.9em;
+}
+.compartment::before {
+    border-left: 0.4em solid rgba(255, 255, 255, 0.3);
+    left: -0.9em;
+}
+.compartment::after {
+    border-right: 0.4em solid rgba(255, 255, 255, 0.3);
+    left: -2em;
+}
+
+.compartment-window {
+    background: #1f8dba;
+    background: -moz-linear-gradient(90deg, transparent 0.8em, skyblue 0.8em) left/2.4em 100%;
+    background: -webkit-linear-gradient(90deg, transparent 0.8em, skyblue 0.8em) left/2.4em 100%;
+    background: -o-linear-gradient(90deg, transparent 0.8em, skyblue 0.8em) left/2.4em 100%;
+    background: -ms-linear-gradient(90deg, transparent 0.8em, skyblue 0.8em) left/2.4em 100%;
+    background: linear-gradient(90deg, transparent 0.8em, skyblue 0.8em) left/2.4em 100%;
+    height: 40%;
+    position: absolute;
+    top: 0.7em;
+    width: 100%;
+}
+.compartment-window::before, .compartment-window::after {
+    content: "";
+    position: absolute;
+}
+.compartment-window::before {
+    animation: up-down 0.3s 0.1s infinite;
+    background: #104b63;
+    border-radius: 50% 50% 0 0;
+    height: 0.6em;
+    left: 50%;
+    top: -1.4em;
+    transform: translate(-50%, 0);
+    width: 110%;
+}
+
+@keyframes up-down {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, -0.3em);
+    }
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes move-train {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+@keyframes body-upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+@keyframes move-smoke {
+    0% {
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -o-filter: blur(0);
+        -ms-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+    50% {
+        -webkit-filter: blur(0.2em);
+        -moz-filter: blur(0.2em);
+        -o-filter: blur(0.2em);
+        -ms-filter: blur(0.2em);
+        filter: blur(0.2em);
+        opacity: 0.6;
+        transform: translate(0, -3em) scale(2);
+    }
+    100% {
+        -webkit-filter: blur(0.3em);
+        -moz-filter: blur(0.3em);
+        -o-filter: blur(0.3em);
+        -ms-filter: blur(0.3em);
+        filter: blur(0.3em);
+        opacity: 0;
+        transform: translate(2.5em, -6em) scale(3);
+    }
+}
+.wheel-joint {
+    animation: wheel-joint 2s linear infinite;
+    background: white;
+    border-radius: 0.6em;
+    height: 0.4em;
+    position: absolute;
+    right: 0.4em;
+    top: calc(50% - 0.2em);
+    transform-origin: 100% 50%;
+    width: 3.6em;
+    z-index: 1;
+}
+.wheel-joint::before, .wheel-joint::after {
+    background: #333333;
+    border: 0.1em solid white;
+    border-radius: 50%;
+    content: "";
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 0.8em;
+}
+.wheel-joint::before {
+    left: -0.4em;
+}
+.wheel-joint::after {
+    right: -0.4em;
+}
+.wheel-joint-2 {
+    left: 1.8em;
+    right: auto;
+    transform: rotate(-15deg);
+    transform-origin: 0 50%;
+    width: 4.4em;
+}
+.wheel-joint-2::before {
+    height: 1.1em;
+    width: 1.1em;
+}
+
+@keyframes wheel-joint {
+    100% {
+        transform: rotate(360deg);
+    }
+}
