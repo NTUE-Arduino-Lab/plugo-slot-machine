@@ -55,11 +55,19 @@ function App() {
     const getResult = () => {
         // 判斷是否要鬼牌，初始機率 30%
         let isJoker = randomIntFromInterval(1, 100) <= parseInt(settings.joker);
-        if (isJoker) {
+        if (isJoker && !resultList.includes("joker")) {
             return "joker";
         }
         // 找出數字，初始 1 ~ 50
-        return randomIntFromInterval(settings.min, settings.max);
+        let result;
+        let hasFound = false;
+        while(!hasFound) {
+            result = randomIntFromInterval(parseInt(settings.min), parseInt(settings.max));
+            if(!resultList.includes(result)) {
+                hasFound = true;
+            }
+        }
+        return result;
     }
 
     return (
