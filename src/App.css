@@ -7,13 +7,13 @@
 
 .App .start-button {
     position: absolute;
-    right: 15%;
-    top: 15%;
+    right: 0.5%;
+    top: 25%;
     color: white;
     font-size: 1.5em;
     z-index: 100;
     transform: translate(-50%, -50%);
-    border: 1px solid;
+    border: 5px solid;
     padding: 0.5em 1em;
     border-radius: 100px;
     transition: all 0.3s;

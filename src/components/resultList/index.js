@@ -7,7 +7,7 @@ const ResultList = ({resultList}) => {
             {
                 resultList.map(result => {
                     return (
-                        <h2>{result}</h2>
+                        <h2 key={result} style={{fontSize: "4em"}}>{result}</h2>
                     )
                 })
             }

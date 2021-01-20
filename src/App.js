@@ -8,6 +8,8 @@ import Settings from "./components/settings";
 import Audio_Train from './assets/audio-train.mp3'
 import CopyRight from "./components/copyright";
 
+let isLogoClick = false;
+
 function App() {
 
     const [isAnimated, setIsAnimated] = useState(false);
@@ -21,6 +23,7 @@ function App() {
 
     const onStart = () => {
         setIsAnimated(true);
+        isLogoClick = false;
         setTimeout(() => {
             onEnd()
         }, 6000)
@@ -52,7 +55,14 @@ function App() {
         setSettings(newSettings)
     }
 
+    const onLogoClick = () => {
+        isLogoClick = true;
+    }
+
     const getResult = () => {
+        if(isLogoClick) {
+            return "joker";
+        }
         // 判斷是否要鬼牌，初始機率 30%
         let isJoker = randomIntFromInterval(1, 100) <= parseInt(settings.joker);
         if (isJoker && !resultList.includes("joker")) {
@@ -78,7 +88,7 @@ function App() {
                 按一下開始
             </div>
             <ResultList resultList={resultList}/>
-            <CopyRight />
+            <CopyRight onLogoClick={onLogoClick}/>
             <Settings
                 joker={settings.joker}
                 min={settings.min}
