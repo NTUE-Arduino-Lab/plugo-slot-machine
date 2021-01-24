@@ -59,8 +59,6 @@ function Slot({isAnimated, currentResult}) {
         }
     }
 
-    console.log(currentResult);
-
     return (
         <div className="Slot-container">
             <div className="slot">

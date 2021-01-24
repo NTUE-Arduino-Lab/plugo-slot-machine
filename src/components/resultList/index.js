@@ -5,9 +5,13 @@ const ResultList = ({resultList}) => {
         <div className="result-list">
             <h2 style={{fontWeight: 'bold'}}>結果紀錄：</h2>
             {
-                resultList.map(result => {
+                resultList.map((result, i) => {
+                    let key = `${result}-${i}`;
                     return (
-                        <h2 key={result} style={{fontSize: "4em"}}>{result}</h2>
+                        <div key={key} className="item-wrapper">
+                            <h2 style={{fontSize: "4em", marginRight: "0.5em"}}>{i + 1}.</h2>
+                            <h2 style={{fontSize: "4em"}}>{result}</h2>
+                        </div>
                     )
                 })
             }
